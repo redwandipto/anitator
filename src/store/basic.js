@@ -1,8 +1,8 @@
 import {tagSet} from "./tags";
+import dataset  from "../dataset/sample1.json" 
 
 function toObject(sentence) {
   const parts = sentence.replace(/[\.\,\?।\'\"\(\)\@\$৳\&\+]+/g, '').match(/\S+/g) || [];
-
   return parts.map(function (p) {
     return {
       text: p,
@@ -25,7 +25,9 @@ export const store = {
     currentSentence: [],
     sentences: [],
     sentenceIndex: 0,
-    finished: false
+    finished: false,
+    isProcessedData: false,
+    relation : []
   },
   reset: function() {
     this.state.sentenceIndex = 0;
@@ -61,12 +63,29 @@ export const store = {
     return this.state.sentenceIndex > 0;
   },
   setText: function (text) {
-    const sentences = text
-      .split(/(\.|।)/g)
-      .map((v) => v.trim())
-      .filter((v) => v !== "." && v !== "।" && v !== "");
-    console.log(sentences);
+
+    var sentences = null;
+
+    if(!this.state.isProcessedData) {
+      sentences = text
+        .split(/(\.|।)/g)
+        .map((v) => v.trim())
+        .filter((v) => v !== "." && v !== "।" && v !== "");
+    }
+    else {
+      console.log("Dataset----->> " + dataset );
+      sentences = []
+      for (var key in dataset){
+        // console.log( key, dataset[key] );
+        sentences.push(dataset[key].join(' '));
+      }
+    }
+
+    // console.log(dataset);
     this.setSentences(sentences);
+  },
+  setProcessedData: function(val) {
+    this.state.isProcessedData = val;
   },
   setSelectedIndex: function (index) {
     this.state.selectedIndex = index;
@@ -77,6 +96,10 @@ export const store = {
   getMaxIndex: function () {
     return this.state.currentSentence.length - 1;
   },
+  // insertRelation: function(entity) {
+  //   if (!this.state.currentSentence.length) return;
+  //   this.state.currentSentence.relation[entity] =
+  // },
   assignTag: function (tag) {
     if (!this.state.currentSentence.length) return;
     this.state.currentSentence[this.state.selectedIndex].tag = tag;
@@ -95,9 +118,27 @@ export const store = {
       store.state.selectedIndex = store.getMaxIndex();
   },
   getCode() {
-    return this.state.sentences
-      .map((s) => [s.map((p) => p.text).join(" "),
+    var Dataset = this.state.sentences
+      .map((s) => [s.map((p) => p.text),
         {tags: s.map(makeTag)}]);
+      
+    var tempDataset = {}
+
+    for(var idx = 0; idx < Dataset.length; idx ++) {
+      console.log(Dataset[idx][0]);
+      for(var t = 0; t < Dataset[idx][1]["tags"].length; t ++) {
+        if( Dataset[idx][1]["tags"][t] == "") {
+          Dataset[idx][1]["tags"][t] = "O";
+        } 
+      }
+      tempDataset[idx] =  { 
+            "sentence" : Dataset[idx][0],
+            "tags"     : Dataset[idx][1]["tags"]
+      }
+    }
+    
+    // console.log("Json -> " + tempDataset[0]["sentence"]);
+    return tempDataset;
   }
 };
 

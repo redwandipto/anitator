@@ -11,7 +11,7 @@
 
 <script>
   import {store} from "../store/basic";
-
+  
   export default {
     name: "SentencePart",
     props: ['content', 'index'],
@@ -24,7 +24,7 @@
       setSelection: function () {
         store.setSelectedIndex(this.index);
       },
-      isSelected: function () {
+      isSelected:   function () {
         return parseInt(this.index) === store.state.selectedIndex;
       }
     }

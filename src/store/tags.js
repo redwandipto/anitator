@@ -1,58 +1,93 @@
 export const tagSet = [
   {
-    'ud': 'NOUN',
-    'tag': 'N',
-    'shortKey': 'n',
-    'display': 'Noun',
-    'class': 'noun'
+    'ud': 'O',
+    'tag': 'O',
+    'shortKey': 'o',
+    'display': 'Outside',
+    'class': ''
   },
   {
-    'ud': 'PROPN',
-    'tag': 'Q',
-    'shortKey': 'q',
-    'display': 'Proper Noun',
-    'class': 'propn'
+    'ud': 'S-PER',
+    'tag': 'S-PER',
+    'shortKey': '',
+    'display': 'S-PER',
+    'class': ''
   },
   {
-    'ud': 'PRON',
-    'tag': 'P',
-    'shortKey': 'p',
-    'display': 'Pronoun',
-    'class': 'pron'
+    'ud': 'B-PER',
+    'tag': 'B-PER',
+    'shortKey': '',
+    'display': 'B-PER',
+    'class': ''
   },
   {
-    'ud': 'ADJ',
-    'tag': 'J',
-    'shortKey': 'j',
-    'display': 'Adjective',
-    'class': 'jj'
+    'ud': 'E-PER',
+    'tag': 'E-PER',
+    'shortKey': '',
+    'display': 'E-PER',
+    'class': ''
   },
   {
-    'ud': 'VERB',
-    'tag': 'V',
-    'shortKey': 'v',
-    'display': 'Verb',
-    'class': 'verb'
+    'ud': 'S-LOC',
+    'tag': 'S-LOC',
+    'shortKey': '',
+    'display': 'S-LOC',
+    'class': ''
   },
   {
-    'ud': 'ADP',
-    'tag': 'E',
-    'shortKey': 'e',
-    'display': 'Adposition',
-    'class': 'adp'
+    'ud': 'B-LOC',
+    'tag': 'B-LOC',
+    'shortKey': '',
+    'display': 'B-LOC',
+    'class': ''
   },
   {
-    'ud': 'CONJ',
-    'tag': 'C',
-    'shortKey': 'c',
-    'display': 'Conjunction',
-    'class': 'conj'
+    'ud': 'E-LOC',
+    'tag': 'E-LOC',
+    'shortKey': '',
+    'display': 'E-LOC',
+    'class': ''
   },
   {
-    'ud': 'NUM',
-    'tag': '0',
-    'shortKey': '0',
-    'display': 'Numeral',
-    'class': 'num'
+    'ud': 'S-ORG',
+    'tag': 'S-ORG',
+    'shortKey': '',
+    'display': 'S-ORG',
+    'class': ''
   },
+  {
+    'ud': 'B-ORG',
+    'tag': 'B-ORG',
+    'shortKey': '',
+    'display': 'B-ORG',
+    'class': ''
+  },
+  {
+    'ud': 'E-ORG',
+    'tag': 'E-ORG',
+    'shortKey': '',
+    'display': 'E-ORG',
+    'class': ''
+  },
+  {
+    'ud': 'S-ATTR',
+    'tag': 'S-ATTR',
+    'shortKey': '',
+    'display': 'S-ATTR',
+    'class': ''
+  },
+  {
+    'ud': 'B-ATTR',
+    'tag': 'B-ATTR',
+    'shortKey': '',
+    'display': 'B-ATTR',
+    'class': ''
+  },
+  {
+    'ud': 'E-ATTR',
+    'tag': 'E-ATTR',
+    'shortKey': '',
+    'display': 'E-ATTR',
+    'class': ''
+  }
 ];

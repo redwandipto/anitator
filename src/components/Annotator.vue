@@ -10,7 +10,7 @@
     <div class="buttons row">
       <button class="btn btn-primary"
               v-on:click="store.assignTag(tag)"
-              v-for="tag of tags">{{ tag.display }} [{{ tag.shortKey }}]
+              v-for="tag of tags">{{ tag.display }}
       </button>
     </div>
     <div class="spacer"></div>
@@ -39,6 +39,11 @@
     name: "Annotator",
     components: {SentencePart},
     data: function () {
+      
+      // console.log("I am from Annotator!");
+      // console.log("-->" + store);
+      // console.log("-->" + tagset);
+      
       return {
         store,
         tags: tagSet

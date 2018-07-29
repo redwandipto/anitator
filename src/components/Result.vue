@@ -8,7 +8,7 @@
       <div class="row text-center">
         <div class="col-12">
           <button class="btn btn-success" v-on:click="store.reset()">Write and Start Over</button>
-          <button type="button" v-on:click="saveFile()">Save Dataset</button>
+          <button class="btn btn-success" type="button" v-on:click="saveFile()">Save Dataset</button>
         </div>
       </div>
     </form>

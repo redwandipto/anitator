@@ -1,11 +1,5 @@
 export const tagSet = [
-  {
-    'ud': 'O',
-    'tag': 'O',
-    'shortKey': 'o',
-    'display': 'Outside',
-    'class': ''
-  },
+  
   {
     'ud': 'S-PER',
     'tag': 'S-PER',
@@ -18,6 +12,13 @@ export const tagSet = [
     'tag': 'B-PER',
     'shortKey': '',
     'display': 'B-PER',
+    'class': ''
+  },
+  {
+    'ud': 'I-PER',
+    'tag': 'I-PER',
+    'shortKey': '',
+    'display': 'I-PER',
     'class': ''
   },
   {
@@ -42,6 +43,13 @@ export const tagSet = [
     'class': ''
   },
   {
+    'ud': 'I-LOC',
+    'tag': 'I-LOC',
+    'shortKey': '',
+    'display': 'I-LOC',
+    'class': ''
+  },
+  {
     'ud': 'E-LOC',
     'tag': 'E-LOC',
     'shortKey': '',
@@ -60,6 +68,13 @@ export const tagSet = [
     'tag': 'B-ORG',
     'shortKey': '',
     'display': 'B-ORG',
+    'class': ''
+  },
+  {
+    'ud': 'I-ORG',
+    'tag': 'I-ORG',
+    'shortKey': '',
+    'display': 'I-ORG',
     'class': ''
   },
   {
@@ -84,10 +99,46 @@ export const tagSet = [
     'class': ''
   },
   {
+    'ud': 'I-ATTR',
+    'tag': 'I-ATTR',
+    'shortKey': '',
+    'display': 'I-ATTR',
+    'class': ''
+  },
+  {
     'ud': 'E-ATTR',
     'tag': 'E-ATTR',
     'shortKey': '',
     'display': 'E-ATTR',
+    'class': ''
+  }
+  ,
+  {
+    'ud': 'S-OBJ',
+    'tag': 'S-OBJ',
+    'shortKey': '',
+    'display': 'S-OBJ',
+    'class': ''
+  },
+  {
+    'ud': 'B-OBJ',
+    'tag': 'B-OBJ',
+    'shortKey': '',
+    'display': 'B-OBJ',
+    'class': ''
+  },
+  {
+    'ud': 'I-OBJ',
+    'tag': 'I-OBJ',
+    'shortKey': '',
+    'display': 'I-OBJ',
+    'class': ''
+  },
+  {
+    'ud': 'E-OBJ',
+    'tag': 'E-OBJ',
+    'shortKey': '',
+    'display': 'E-OBJ',
     'class': ''
   }
 ];

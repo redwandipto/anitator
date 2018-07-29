@@ -27,7 +27,92 @@
       </button>
       <button class="btn btn-success" v-on:click="store.state.finished = true">Finish</button>
     </div>
+
+
+    <br><br>
+    <div class = "row">
+
+      <div class="col-md-6">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">TAG</th>
+                  <th scope="col">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>PER</td>
+                  <td>Person entity</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>LOC</td>
+                  <td>Location Entity</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>ORG</td>
+                  <td>Organization entity</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>ATTR</td>
+                  <td>Attribute entity</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>OBJ</td>
+                  <td>Object entity</td>
+                </tr>
+              </tbody>
+            </table>
+
+      </div>
+
+      <div class="col-md-6">
+            <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">SUB-TAG</th>
+                  <th scope="col">Meaning</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>S-TAG</td>
+                  <td>Single enitity</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>B-TAG</td>
+                  <td>Beginning of a multivalued tag</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>I-TAG</td>
+                  <td>Inside of a multivalued tag</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>E-TAG</td>
+                  <td>End of a multivalued tag</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      
+    </div>
+
+    <br>
+    <h4> BIOES - notation is used for this annotation task </h4>
+
   </div>
+
 </template>
 
 <script>
@@ -39,8 +124,7 @@
     name: "Annotator",
     components: {SentencePart},
     data: function () {
-      
-      // console.log("I am from Annotator!");
+
       // console.log("-->" + store);
       // console.log("-->" + tagset);
       

@@ -12,6 +12,6 @@ As of now it can only generate training data for tagging spaCy POS Tagger. You c
 ### Running
 
 ```
-$ npm install dev
+$ npm install
 $ npm run dev
 ```

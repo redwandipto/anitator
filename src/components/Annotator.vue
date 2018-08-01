@@ -8,9 +8,25 @@
     </p>
     <div class="spacer"></div>
     <div class="buttons row">
+      <button class="btn btn-danger"
+              v-on:click="store.assignTag(tag)"
+              v-for="tag of outSide">{{ tag.display }}
+      </button>
       <button class="btn btn-primary"
               v-on:click="store.assignTag(tag)"
-              v-for="tag of tags">{{ tag.display }}
+              v-for="tag of pertags">{{ tag.display }}
+      </button>
+      <button class="btn btn-success"
+              v-on:click="store.assignTag(tag)"
+              v-for="tag of loctags">{{ tag.display }}
+      </button>
+      <button class="btn btn-info"
+              v-on:click="store.assignTag(tag)"
+              v-for="tag of orgtags">{{ tag.display }}
+      </button>
+      <button class="btn btn-warning"
+              v-on:click="store.assignTag(tag)"
+              v-for="tag of objtags">{{ tag.display }}
       </button>
     </div>
     <div class="spacer"></div>
@@ -82,6 +98,7 @@
                 </tr>
               </thead>
               <tbody>
+
                 <tr>
                   <th scope="row">1</th>
                   <td>S-TAG</td>
@@ -102,6 +119,11 @@
                   <td>E-TAG</td>
                   <td>End of a multivalued tag</td>
                 </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>O-TAG</td>
+                  <td>Out of consideration</td>
+                </tr>
               </tbody>
             </table>
       </div>
@@ -119,6 +141,9 @@
   import SentencePart from "./SentencePart";
   import {store} from "../store/basic";
   import {tagSet} from "../store/tags";
+  // import {loctagSet} from "../store/loctagSet";
+  // import {orgtagSet} from "../store/orgtagSet";
+  // import {objtagSet} from "../store/objtagSet";
 
   export default {
     name: "Annotator",
@@ -127,10 +152,16 @@
 
       // console.log("-->" + store);
       // console.log("-->" + tagset);
-      
+
+      console.log([tagSet[13],tagSet[14],tagSet[15],tagSet[16]])
+
       return {
         store,
-        tags: tagSet
+        outSide: [tagSet[0]] ,
+        pertags: [tagSet[1],tagSet[2],tagSet[3],tagSet[4]],
+        loctags: [tagSet[5],tagSet[6],tagSet[7],tagSet[8]],
+        orgtags: [tagSet[9],tagSet[10],tagSet[11],tagSet[12]],
+        objtags: [tagSet[13],tagSet[14],tagSet[15],tagSet[16]]
       }
     },
     methods: {}

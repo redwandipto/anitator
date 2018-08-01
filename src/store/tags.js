@@ -1,6 +1,14 @@
 export const tagSet = [
   
   {
+    'ud': 'O',
+    'tag': 'O',
+    'shortKey': '',
+    'display': 'OutSide',
+    'class': ''
+  },
+
+  {
     'ud': 'S-PER',
     'tag': 'S-PER',
     'shortKey': '',
@@ -84,35 +92,6 @@ export const tagSet = [
     'display': 'E-ORG',
     'class': ''
   },
-  {
-    'ud': 'S-ATTR',
-    'tag': 'S-ATTR',
-    'shortKey': '',
-    'display': 'S-ATTR',
-    'class': ''
-  },
-  {
-    'ud': 'B-ATTR',
-    'tag': 'B-ATTR',
-    'shortKey': '',
-    'display': 'B-ATTR',
-    'class': ''
-  },
-  {
-    'ud': 'I-ATTR',
-    'tag': 'I-ATTR',
-    'shortKey': '',
-    'display': 'I-ATTR',
-    'class': ''
-  },
-  {
-    'ud': 'E-ATTR',
-    'tag': 'E-ATTR',
-    'shortKey': '',
-    'display': 'E-ATTR',
-    'class': ''
-  }
-  ,
   {
     'ud': 'S-OBJ',
     'tag': 'S-OBJ',
